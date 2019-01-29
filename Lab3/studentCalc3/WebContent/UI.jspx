@@ -20,21 +20,34 @@
 		<legend>Student Loan Calculator</legend>
 		This is an OSAP Student Loan Calculator.
 		<table>
+			<tr>
+				<td class="error">
+					<c:choose>
+								<c:when test="${sessionScope['error'] == true}">
+									${sessionScope['errorMsg']}
+								</c:when>
+								<c:otherwise>
+									
+								</c:otherwise>
+								  
+					</c:choose>
+				</td>
+			</tr>
 			<tr>  
 				<td><label for='principal'>Principal: </label></td>  
 				<td><input id='principalone' name='principalone' type='number' value="${sessionScope['savedPrincipal']}"/></td>  
 			</tr>  
-			<br/>  
+ 
 			<tr>  
 				<td><label for='interest'>Interest Rate: </label></td>  
 				<td><input id='interestone' step ='0.01' name='interestone' type='number' value="${sessionScope['savedInterest']}"/></td>  
 			</tr>  
-			<br/>  
+
 			<tr>  
 				<td><label for='period'>Period: </label></td>  
 				<td><input id='periodone' name='periodone' type='number' value="${sessionScope['savedPeriod']}"/></td>  
 			</tr>  
-			<br/>  
+
 			<tr>  
 				<td><label for='gracePeriod'>Grace Period: </label></td>  
 				
@@ -48,8 +61,7 @@
 					  
 				</c:choose>
 				
-			</tr>  
-			<br/>  
+			</tr>   
 			  
 			<tr>  
 				<td><button action='submit' name='submit' label='submit'> Submit </button></td>  

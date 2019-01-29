@@ -21,6 +21,10 @@ color: #fff; }
  tr, td {
 padding: 10px;
  }
+ 	td.error {
+ 	font-size: 17px;
+ 	color: red;
+ }
  label {
  display: block;
  margin-top: 16px;
