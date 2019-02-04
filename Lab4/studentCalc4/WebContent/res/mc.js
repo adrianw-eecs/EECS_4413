@@ -1,25 +1,24 @@
 function doSimpleAjax(address){
-	var request = new XMLHttpRequest();
-	alert("ABC");
+	var xhr = new XMLHttpRequest();
+
 	buildString = "principalone=" + document.getElementById("principalone").value;
 	buildString = buildString + "&" + "interestone=" + document.getElementById("interestone").value;
 	buildString = buildString + "&" + "periodone=" + document.getElementById("periodone").value;
 	buildString = buildString + "&" + "grace=" + document.getElementById("grace").value;
 
 	alert(buildString);
-	request.open("GET", (address + "?" + buildString), true);
-	alert("!");
-	request.onreadystatechange = function () {
-		handler(request);
+	xhr.open("GET", (address + "?" + buildString), true);
+	xhr.onreadystatechange = function () {
+		handler(xhr);
 	};
-	alert("!!!!");
-	request.send();
+
+	xhr.send();
 }
 
-function handler(request){
-	if((request.readyState ==4 ) && (request.status == 200)){
+function handler(xhr){
+	if((xhr.readyState ==4 ) && (xhr.status == 200)){
 		var target = document.getElementById("ajaxTarget");
-		target.innerHTML = request.responseText;
+		target.innerHTML = xhr.responseText;
 	}
 }
 

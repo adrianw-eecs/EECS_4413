@@ -22,11 +22,9 @@
 			<tr>  
 				<td><label for='gracePeriod'>Grace Period Interest: </label></td> <td><label> <f:formatNumber type="currency">  ${sessionScope['gracePerInt']} </f:formatNumber> </label> </td>  
 			</tr>  
-			<br/>  
 			<tr>  
 				<td><label for='monthlypayments'>Monthly Payments: </label></td> <td><label>  <f:formatNumber type="currency"> ${sessionScope['monthlyPay']} </f:formatNumber> </label> </td>  
-			</tr>  
-			<br/>  
+			</tr>   
 			<tr>  
 				<td><button action='' name='restart' label='restart'> Restart </button></td>  
 			</tr>

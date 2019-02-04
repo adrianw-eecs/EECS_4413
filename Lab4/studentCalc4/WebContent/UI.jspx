@@ -62,9 +62,11 @@
 					<c:otherwise>
 						<td><input id='grace' name='graceP' type='checkbox'/></td>
 					</c:otherwise>
-					  
 				</c:choose>
 				
+			</tr> 
+			<tr>
+			<td><label id="ajaxTarget"></label></td>
 			</tr>   
 			  
 			<tr>  
