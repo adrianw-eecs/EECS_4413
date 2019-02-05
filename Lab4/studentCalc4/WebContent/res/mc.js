@@ -5,6 +5,7 @@ function doSimpleAjax(address){
 	buildString = buildString + "&" + "interestone=" + document.getElementById("interestone").value;
 	buildString = buildString + "&" + "periodone=" + document.getElementById("periodone").value;
 	buildString = buildString + "&" + "grace=" + document.getElementById("grace").value;
+	buildString = buildString + "&" + "ajax=true"
 
 	alert(buildString);
 	xhr.open("GET", (address + "?" + buildString), true);
@@ -23,14 +24,9 @@ function handler(xhr){
 }
 
 function validate(){
-
-	if(!validatePrincipal()){return false;}
-	
-	if(!validateInterest()){return false;}
-	
-	if(!validatePeriod()){return false;}
-	return true;
-	
+	validatePrincipal()
+	validateInterest()
+	validatePeriod()
 }
 
 function validatePrincipal(){

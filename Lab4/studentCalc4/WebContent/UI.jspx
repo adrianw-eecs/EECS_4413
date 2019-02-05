@@ -66,12 +66,12 @@
 				
 			</tr> 
 			<tr>
-			<td><label id="ajaxTarget"></label></td>
+			<td><label id="ajaxTarget" colspan="3"></label></td>
 			</tr>   
 			  
 			<tr>  
 				<td><button action='submit' name='submit' label='submit'> Submit </button></td>  
-				<td> <button name='submitAjax' value="true" label='submitAjax' onclick="doSimpleAjax('/studentCalc4/Startup/Ajax');">Submit Ajax</button></td>
+				<td><button name='ajax' value="true" label='ajaxBtn' onclick="doSimpleAjax('/studentCalc4/Startup/Ajax'); return false;">Submit Ajax</button></td>
 			</tr>
 		</table>
 	</fieldset>
