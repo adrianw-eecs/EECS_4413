@@ -4,8 +4,7 @@ function doSimpleAjax(address){
 	buildString = "principalone=" + document.getElementById("principalone").value;
 	buildString = buildString + "&" + "interestone=" + document.getElementById("interestone").value;
 	buildString = buildString + "&" + "periodone=" + document.getElementById("periodone").value;
-	buildString = buildString + "&" + "grace=" + document.getElementById("grace").value;
-	buildString = buildString + "&" + "ajax=true"
+	buildString = buildString + "&" + "graceP=" + document.getElementById("grace").checked;
 
 	alert(buildString);
 	xhr.open("GET", (address + "?" + buildString), true);
