@@ -35,21 +35,21 @@
 				</td>
 			</tr>
 			<tr>  
-				<td><label for='principal'>Principal: </label></td>  
+				<td><label id="principaltxt" for='principal'>Principal: </label> </td>  
 				<td><input id='principalone' name='principalone' type='number' value="${sessionScope['savedPrincipal']}"/></td> 
-				<td><label id="principalError"></label> </td>
+
 			</tr>  
  
 			<tr>  
-				<td><label for='interest'>Interest Rate: </label></td>  
+				<td><label id="interesttxt" for='interest'>Interest Rate: </label></td>  
 				<td><input id='interestone' step ='0.01' name='interestone' type='number' value="${sessionScope['savedInterest']}"/></td>  
-				<td><label id="interestError"></label> </td>
+
 			</tr>  
 
 			<tr>  
-				<td><label for='period'>Period: </label></td>  
+				<td><label id="periodtxt"  for='period'>Period: </label><label id="periodError"></label></td>  
 				<td><input id='periodone' name='periodone' type='number' value="${sessionScope['savedPeriod']}"/></td>  
-				<td><label id="periodError"></label> </td>
+
 			</tr>  
 
 			<tr>  
